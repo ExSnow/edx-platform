@@ -80,7 +80,7 @@ class RecoverAccountTests(TestCase):
         with NamedTemporaryFile() as csv:
             csv = self._write_test_csv(csv, lines=['amm,amy@myedx.com,amy@newemail.com\n'])
 
-            expected_message = 'Unable to send email to amy@myedx.com and ' \
+            expected_message = 'Unable to send email to amy@newemail.com and ' \
                                'exception was User matching query does not exist.'
 
             with LogCapture(LOGGER_NAME) as log:

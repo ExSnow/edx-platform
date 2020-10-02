@@ -87,7 +87,7 @@ class Command(BaseCommand):
                 successful_updates.append(desired_email)
             except Exception as exc:  # pylint: disable=broad-except
                 logger.exception('Unable to send email to {desired_email} and exception was {exp}'.
-                                 format(email=desired_email, exp=exc)
+                                 format(desired_email=desired_email, exp=exc)
                                  )
 
                 failed_updates.append(current_email)
